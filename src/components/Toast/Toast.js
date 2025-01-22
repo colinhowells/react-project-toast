@@ -28,7 +28,7 @@ function Toast({ data }) {
 				<Icon size={24} />
 			</div>
 			<p className={styles.content}>
-				<VisuallyHidden>{variant}</VisuallyHidden>
+				<VisuallyHidden>{variant}: </VisuallyHidden>
 				{message}
 			</p>
 			<button

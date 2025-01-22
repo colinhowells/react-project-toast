@@ -7,9 +7,7 @@ export const ToastsContext = React.createContext();
 function ToastsProvider({ children }) {
 	const [toasts, setToasts] = React.useState([]);
 
-	const clearToasts = React.useCallback((e) => {
-		if (e.code === 'Escape') setToasts([]);
-	}, []);
+	const clearToasts = React.useCallback(() => setToasts([]), []);
 	useEscapeKey(clearToasts);
 
 	return <ToastsContext.Provider value={[toasts, setToasts]}>{children}</ToastsContext.Provider>;
