@@ -8,7 +8,7 @@ function useEscapeKey(callback) {
 		}
 		window.addEventListener('keydown', callIfEscape);
 		return () => window.removeEventListener('keydown', callIfEscape);
-	}, []);
+	}, [callback]);
 }
 
 export default useEscapeKey;
